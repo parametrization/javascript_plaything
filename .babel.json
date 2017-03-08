@@ -1,0 +1,694 @@
+{
+  "{\"filename\":\"./test/testRunner.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"./test\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.23.1": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "./test/testRunner.js",
+      "filenameRelative": "./test/testRunner.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "testRunner.js",
+      "sourceFileName": "testRunner.js",
+      "sourceRoot": "./test",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "./test",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "testRunner"
+    },
+    "ignored": false,
+    "code": "const assert = require('chai').assert;\n\n//import {getNestedValue} from 'runner';\nvar objectProperties = require('../lib/objectProperties');\nvar getNestedValue = objectProperties.getNestedValue;\n\ndescribe('getNestedValue()', () => {\n    it('should return undefined for undefined objects', () => assert.isUndefined(getNestedValue(undefined, 'foo')));\n    it('should return undefined for undefined properties', () => assert.isUndefined(getNestedValue({}, 'foo')));\n    it('should return the named property if defined', () => assert.equal(getNestedValue({ bar: 'baz' }, 'bar'), 'baz'));\n    it('should return the deeply nested named property if defined', () => assert.equal(getNestedValue({ bar: { baz: 1 } }, 'bar.baz'), 1));\n    it('should return undefined for a deeply nested named property if undefined', () => assert.isUndefined(getNestedValue({}, 'bar.baz')));\n    it('should not accept to get empty property names', () => assert.throws(() => getNestedValue({}, '')));\n});\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRlc3RSdW5uZXIuanMiXSwibmFtZXMiOlsiYXNzZXJ0IiwicmVxdWlyZSIsIm9iamVjdFByb3BlcnRpZXMiLCJnZXROZXN0ZWRWYWx1ZSIsImRlc2NyaWJlIiwiaXQiLCJpc1VuZGVmaW5lZCIsInVuZGVmaW5lZCIsImVxdWFsIiwiYmFyIiwiYmF6IiwidGhyb3dzIl0sIm1hcHBpbmdzIjoiQUFBQSxNQUFNQSxTQUFTQyxRQUFRLE1BQVIsRUFBZ0JELE1BQS9COztBQUVBO0FBQ0EsSUFBSUUsbUJBQW1CRCxRQUFRLHlCQUFSLENBQXZCO0FBQ0EsSUFBSUUsaUJBQWlCRCxpQkFBaUJDLGNBQXRDOztBQUVBQyxTQUFTLGtCQUFULEVBQTZCLE1BQU07QUFDL0JDLE9BQUcsK0NBQUgsRUFBb0QsTUFDaERMLE9BQU9NLFdBQVAsQ0FBbUJILGVBQWVJLFNBQWYsRUFBMEIsS0FBMUIsQ0FBbkIsQ0FESjtBQUdBRixPQUFHLGtEQUFILEVBQXVELE1BQ25ETCxPQUFPTSxXQUFQLENBQW1CSCxlQUFlLEVBQWYsRUFBbUIsS0FBbkIsQ0FBbkIsQ0FESjtBQUdBRSxPQUFHLDZDQUFILEVBQWtELE1BQzlDTCxPQUFPUSxLQUFQLENBQWFMLGVBQWUsRUFBQ00sS0FBSyxLQUFOLEVBQWYsRUFBNkIsS0FBN0IsQ0FBYixFQUFrRCxLQUFsRCxDQURKO0FBR0FKLE9BQUcsMkRBQUgsRUFBZ0UsTUFDNURMLE9BQU9RLEtBQVAsQ0FBYUwsZUFBZSxFQUFDTSxLQUFLLEVBQUVDLEtBQUssQ0FBUCxFQUFOLEVBQWYsRUFBa0MsU0FBbEMsQ0FBYixFQUEyRCxDQUEzRCxDQURKO0FBR0FMLE9BQUcseUVBQUgsRUFBOEUsTUFDMUVMLE9BQU9NLFdBQVAsQ0FBbUJILGVBQWUsRUFBZixFQUFtQixTQUFuQixDQUFuQixDQURKO0FBR0FFLE9BQUcsK0NBQUgsRUFBb0QsTUFDaERMLE9BQU9XLE1BQVAsQ0FBYyxNQUFNUixlQUFlLEVBQWYsRUFBbUIsRUFBbkIsQ0FBcEIsQ0FESjtBQUdILENBbkJEIiwiZmlsZSI6InRlc3RSdW5uZXIuanMiLCJzb3VyY2VSb290IjoiQzovVXNlcnMvUi5TdGV2ZW4vdGVzdCIsInNvdXJjZXNDb250ZW50IjpbImNvbnN0IGFzc2VydCA9IHJlcXVpcmUoJ2NoYWknKS5hc3NlcnQ7XHJcblxyXG4vL2ltcG9ydCB7Z2V0TmVzdGVkVmFsdWV9IGZyb20gJ3J1bm5lcic7XHJcbnZhciBvYmplY3RQcm9wZXJ0aWVzID0gcmVxdWlyZSgnLi4vbGliL29iamVjdFByb3BlcnRpZXMnKVxyXG52YXIgZ2V0TmVzdGVkVmFsdWUgPSBvYmplY3RQcm9wZXJ0aWVzLmdldE5lc3RlZFZhbHVlO1xyXG5cclxuZGVzY3JpYmUoJ2dldE5lc3RlZFZhbHVlKCknLCAoKSA9PiB7XHJcbiAgICBpdCgnc2hvdWxkIHJldHVybiB1bmRlZmluZWQgZm9yIHVuZGVmaW5lZCBvYmplY3RzJywgKCkgPT5cclxuICAgICAgICBhc3NlcnQuaXNVbmRlZmluZWQoZ2V0TmVzdGVkVmFsdWUodW5kZWZpbmVkLCAnZm9vJykpXHJcbiAgICApO1xyXG4gICAgaXQoJ3Nob3VsZCByZXR1cm4gdW5kZWZpbmVkIGZvciB1bmRlZmluZWQgcHJvcGVydGllcycsICgpID0+XHJcbiAgICAgICAgYXNzZXJ0LmlzVW5kZWZpbmVkKGdldE5lc3RlZFZhbHVlKHt9LCAnZm9vJykpXHJcbiAgICApO1xyXG4gICAgaXQoJ3Nob3VsZCByZXR1cm4gdGhlIG5hbWVkIHByb3BlcnR5IGlmIGRlZmluZWQnLCAoKSA9PlxyXG4gICAgICAgIGFzc2VydC5lcXVhbChnZXROZXN0ZWRWYWx1ZSh7YmFyOiAnYmF6J30sICdiYXInKSwgJ2JheicpXHJcbiAgICApO1xyXG4gICAgaXQoJ3Nob3VsZCByZXR1cm4gdGhlIGRlZXBseSBuZXN0ZWQgbmFtZWQgcHJvcGVydHkgaWYgZGVmaW5lZCcsICgpID0+XHJcbiAgICAgICAgYXNzZXJ0LmVxdWFsKGdldE5lc3RlZFZhbHVlKHtiYXI6IHsgYmF6OiAxIH19LCAnYmFyLmJheicpLCAxKVxyXG4gICAgKTtcclxuICAgIGl0KCdzaG91bGQgcmV0dXJuIHVuZGVmaW5lZCBmb3IgYSBkZWVwbHkgbmVzdGVkIG5hbWVkIHByb3BlcnR5IGlmIHVuZGVmaW5lZCcsICgpID0+XHJcbiAgICAgICAgYXNzZXJ0LmlzVW5kZWZpbmVkKGdldE5lc3RlZFZhbHVlKHt9LCAnYmFyLmJheicpKVxyXG4gICAgKTtcclxuICAgIGl0KCdzaG91bGQgbm90IGFjY2VwdCB0byBnZXQgZW1wdHkgcHJvcGVydHkgbmFtZXMnLCAoKSA9PlxyXG4gICAgICAgIGFzc2VydC50aHJvd3MoKCkgPT4gZ2V0TmVzdGVkVmFsdWUoe30sICcnKSlcclxuICAgIClcclxufSk7Il19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "testRunner.js"
+      ],
+      "names": [
+        "assert",
+        "require",
+        "objectProperties",
+        "getNestedValue",
+        "describe",
+        "it",
+        "isUndefined",
+        "undefined",
+        "equal",
+        "bar",
+        "baz",
+        "throws"
+      ],
+      "mappings": "AAAA,MAAMA,SAASC,QAAQ,MAAR,EAAgBD,MAA/B;;AAEA;AACA,IAAIE,mBAAmBD,QAAQ,yBAAR,CAAvB;AACA,IAAIE,iBAAiBD,iBAAiBC,cAAtC;;AAEAC,SAAS,kBAAT,EAA6B,MAAM;AAC/BC,OAAG,+CAAH,EAAoD,MAChDL,OAAOM,WAAP,CAAmBH,eAAeI,SAAf,EAA0B,KAA1B,CAAnB,CADJ;AAGAF,OAAG,kDAAH,EAAuD,MACnDL,OAAOM,WAAP,CAAmBH,eAAe,EAAf,EAAmB,KAAnB,CAAnB,CADJ;AAGAE,OAAG,6CAAH,EAAkD,MAC9CL,OAAOQ,KAAP,CAAaL,eAAe,EAACM,KAAK,KAAN,EAAf,EAA6B,KAA7B,CAAb,EAAkD,KAAlD,CADJ;AAGAJ,OAAG,2DAAH,EAAgE,MAC5DL,OAAOQ,KAAP,CAAaL,eAAe,EAACM,KAAK,EAAEC,KAAK,CAAP,EAAN,EAAf,EAAkC,SAAlC,CAAb,EAA2D,CAA3D,CADJ;AAGAL,OAAG,yEAAH,EAA8E,MAC1EL,OAAOM,WAAP,CAAmBH,eAAe,EAAf,EAAmB,SAAnB,CAAnB,CADJ;AAGAE,OAAG,+CAAH,EAAoD,MAChDL,OAAOW,MAAP,CAAc,MAAMR,eAAe,EAAf,EAAmB,EAAnB,CAApB,CADJ;AAGH,CAnBD",
+      "file": "testRunner.js",
+      "sourceRoot": "./test",
+      "sourcesContent": [
+        "const assert = require('chai').assert;\r\n\r\n//import {getNestedValue} from 'runner';\r\nvar objectProperties = require('../lib/objectProperties')\r\nvar getNestedValue = objectProperties.getNestedValue;\r\n\r\ndescribe('getNestedValue()', () => {\r\n    it('should return undefined for undefined objects', () =>\r\n        assert.isUndefined(getNestedValue(undefined, 'foo'))\r\n    );\r\n    it('should return undefined for undefined properties', () =>\r\n        assert.isUndefined(getNestedValue({}, 'foo'))\r\n    );\r\n    it('should return the named property if defined', () =>\r\n        assert.equal(getNestedValue({bar: 'baz'}, 'bar'), 'baz')\r\n    );\r\n    it('should return the deeply nested named property if defined', () =>\r\n        assert.equal(getNestedValue({bar: { baz: 1 }}, 'bar.baz'), 1)\r\n    );\r\n    it('should return undefined for a deeply nested named property if undefined', () =>\r\n        assert.isUndefined(getNestedValue({}, 'bar.baz'))\r\n    );\r\n    it('should not accept to get empty property names', () =>\r\n        assert.throws(() => getNestedValue({}, ''))\r\n    )\r\n});"
+      ]
+    },
+    "mtime": 1488867114460
+  },
+  "{\"filename\":\"./test/testRunner.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"./test\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.23.1": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "../runner",
+            "imported": [
+              "getNestedValue"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "getNestedValue",
+                "local": "getNestedValue"
+              }
+            ]
+          },
+          {
+            "source": "../runner",
+            "imported": [
+              "getNestedValueDeclarative"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "getNestedValueDeclarative",
+                "local": "getNestedValueDeclarative"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "./test/testRunner.js",
+      "filenameRelative": "./test/testRunner.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "testRunner.js",
+      "sourceFileName": "testRunner.js",
+      "sourceRoot": "./test",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "./test",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "testRunner"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar _runner = require('../runner');\n\nvar assert = require('chai').assert;\n\ndescribe('getNestedValue()', function () {\n    it('should return undefined for undefined objects', function () {\n        return assert.isUndefined((0, _runner.getNestedValue)(undefined, 'foo'));\n    });\n    it('should return undefined for undefined properties', function () {\n        return assert.isUndefined((0, _runner.getNestedValue)({}, 'foo'));\n    });\n    it('should return the named property if defined', function () {\n        return assert.equal((0, _runner.getNestedValue)({ bar: 'baz' }, 'bar'), 'baz');\n    });\n    it('should return the deeply nested named property if defined', function () {\n        return assert.equal((0, _runner.getNestedValue)({ bar: { baz: 1 } }, 'bar.baz'), 1);\n    });\n    it('should return undefined for a deeply nested named property if undefined', function () {\n        return assert.isUndefined((0, _runner.getNestedValue)({}, 'bar.baz'));\n    });\n    it('should not accept to get empty property names', function () {\n        return assert.throws(function () {\n            return (0, _runner.getNestedValue)({}, '');\n        });\n    });\n});\n\ndescribe('getNestedValueDeclarative2()', function () {\n    it('should return undefined for undefined objects', function () {\n        return assert.isUndefined((0, _runner.getNestedValueDeclarative)(undefined, 'foo'));\n    });\n    it('should return undefined for undefined properties', function () {\n        return assert.isUndefined((0, _runner.getNestedValueDeclarative)({}, 'foo'));\n    });\n    it('should return the named property if defined', function () {\n        return assert.equal((0, _runner.getNestedValueDeclarative)({ bar: 'baz' }, 'bar'), 'baz');\n    });\n    it('should return the deeply nested named property if defined', function () {\n        return assert.equal((0, _runner.getNestedValueDeclarative)({ bar: { baz: 1 } }, 'bar.baz'), 1);\n    });\n    it('should return undefined for a deeply nested named property if undefined', function () {\n        return assert.isUndefined((0, _runner.getNestedValueDeclarative)({}, 'bar.baz'));\n    });\n    it('should not accept to get empty property names', function () {\n        return assert.throws(function () {\n            return (0, _runner.getNestedValueDeclarative)({}, '');\n        });\n    });\n});\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRlc3RSdW5uZXIuanMiXSwibmFtZXMiOlsiYXNzZXJ0IiwicmVxdWlyZSIsImRlc2NyaWJlIiwiaXQiLCJpc1VuZGVmaW5lZCIsInVuZGVmaW5lZCIsImVxdWFsIiwiYmFyIiwiYmF6IiwidGhyb3dzIl0sIm1hcHBpbmdzIjoiOztBQUVBOztBQUZBLElBQU1BLFNBQVNDLFFBQVEsTUFBUixFQUFnQkQsTUFBL0I7O0FBS0FFLFNBQVMsa0JBQVQsRUFBNkIsWUFBTTtBQUMvQkMsT0FBRywrQ0FBSCxFQUFvRDtBQUFBLGVBQ2hESCxPQUFPSSxXQUFQLENBQW1CLDRCQUFlQyxTQUFmLEVBQTBCLEtBQTFCLENBQW5CLENBRGdEO0FBQUEsS0FBcEQ7QUFHQUYsT0FBRyxrREFBSCxFQUF1RDtBQUFBLGVBQ25ESCxPQUFPSSxXQUFQLENBQW1CLDRCQUFlLEVBQWYsRUFBbUIsS0FBbkIsQ0FBbkIsQ0FEbUQ7QUFBQSxLQUF2RDtBQUdBRCxPQUFHLDZDQUFILEVBQWtEO0FBQUEsZUFDOUNILE9BQU9NLEtBQVAsQ0FBYSw0QkFBZSxFQUFDQyxLQUFLLEtBQU4sRUFBZixFQUE2QixLQUE3QixDQUFiLEVBQWtELEtBQWxELENBRDhDO0FBQUEsS0FBbEQ7QUFHQUosT0FBRywyREFBSCxFQUFnRTtBQUFBLGVBQzVESCxPQUFPTSxLQUFQLENBQWEsNEJBQWUsRUFBQ0MsS0FBSyxFQUFFQyxLQUFLLENBQVAsRUFBTixFQUFmLEVBQWtDLFNBQWxDLENBQWIsRUFBMkQsQ0FBM0QsQ0FENEQ7QUFBQSxLQUFoRTtBQUdBTCxPQUFHLHlFQUFILEVBQThFO0FBQUEsZUFDMUVILE9BQU9JLFdBQVAsQ0FBbUIsNEJBQWUsRUFBZixFQUFtQixTQUFuQixDQUFuQixDQUQwRTtBQUFBLEtBQTlFO0FBR0FELE9BQUcsK0NBQUgsRUFBb0Q7QUFBQSxlQUNoREgsT0FBT1MsTUFBUCxDQUFjO0FBQUEsbUJBQU0sNEJBQWUsRUFBZixFQUFtQixFQUFuQixDQUFOO0FBQUEsU0FBZCxDQURnRDtBQUFBLEtBQXBEO0FBR0gsQ0FuQkQ7O0FBcUJBUCxTQUFTLDhCQUFULEVBQXlDLFlBQU07QUFDM0NDLE9BQUcsK0NBQUgsRUFBb0Q7QUFBQSxlQUNoREgsT0FBT0ksV0FBUCxDQUFtQix1Q0FBMEJDLFNBQTFCLEVBQXFDLEtBQXJDLENBQW5CLENBRGdEO0FBQUEsS0FBcEQ7QUFHQUYsT0FBRyxrREFBSCxFQUF1RDtBQUFBLGVBQ25ESCxPQUFPSSxXQUFQLENBQW1CLHVDQUEwQixFQUExQixFQUE4QixLQUE5QixDQUFuQixDQURtRDtBQUFBLEtBQXZEO0FBR0FELE9BQUcsNkNBQUgsRUFBa0Q7QUFBQSxlQUM5Q0gsT0FBT00sS0FBUCxDQUFhLHVDQUEwQixFQUFDQyxLQUFLLEtBQU4sRUFBMUIsRUFBd0MsS0FBeEMsQ0FBYixFQUE2RCxLQUE3RCxDQUQ4QztBQUFBLEtBQWxEO0FBR0FKLE9BQUcsMkRBQUgsRUFBZ0U7QUFBQSxlQUM1REgsT0FBT00sS0FBUCxDQUFhLHVDQUEwQixFQUFDQyxLQUFLLEVBQUVDLEtBQUssQ0FBUCxFQUFOLEVBQTFCLEVBQTZDLFNBQTdDLENBQWIsRUFBc0UsQ0FBdEUsQ0FENEQ7QUFBQSxLQUFoRTtBQUdBTCxPQUFHLHlFQUFILEVBQThFO0FBQUEsZUFDMUVILE9BQU9JLFdBQVAsQ0FBbUIsdUNBQTBCLEVBQTFCLEVBQThCLFNBQTlCLENBQW5CLENBRDBFO0FBQUEsS0FBOUU7QUFHQUQsT0FBRywrQ0FBSCxFQUFvRDtBQUFBLGVBQ2hESCxPQUFPUyxNQUFQLENBQWM7QUFBQSxtQkFBTSx1Q0FBMEIsRUFBMUIsRUFBOEIsRUFBOUIsQ0FBTjtBQUFBLFNBQWQsQ0FEZ0Q7QUFBQSxLQUFwRDtBQUdILENBbkJEIiwiZmlsZSI6InRlc3RSdW5uZXIuanMiLCJzb3VyY2VSb290IjoiQzovVXNlcnMvUi5TdGV2ZW4vdGVzdCIsInNvdXJjZXNDb250ZW50IjpbImNvbnN0IGFzc2VydCA9IHJlcXVpcmUoJ2NoYWknKS5hc3NlcnQ7XHJcblxyXG5pbXBvcnQge2dldE5lc3RlZFZhbHVlfSBmcm9tICcuLi9ydW5uZXInO1xyXG5pbXBvcnQge2dldE5lc3RlZFZhbHVlRGVjbGFyYXRpdmV9IGZyb20gJy4uL3J1bm5lcic7XHJcblxyXG5kZXNjcmliZSgnZ2V0TmVzdGVkVmFsdWUoKScsICgpID0+IHtcclxuICAgIGl0KCdzaG91bGQgcmV0dXJuIHVuZGVmaW5lZCBmb3IgdW5kZWZpbmVkIG9iamVjdHMnLCAoKSA9PlxyXG4gICAgICAgIGFzc2VydC5pc1VuZGVmaW5lZChnZXROZXN0ZWRWYWx1ZSh1bmRlZmluZWQsICdmb28nKSlcclxuICAgICk7XHJcbiAgICBpdCgnc2hvdWxkIHJldHVybiB1bmRlZmluZWQgZm9yIHVuZGVmaW5lZCBwcm9wZXJ0aWVzJywgKCkgPT5cclxuICAgICAgICBhc3NlcnQuaXNVbmRlZmluZWQoZ2V0TmVzdGVkVmFsdWUoe30sICdmb28nKSlcclxuICAgICk7XHJcbiAgICBpdCgnc2hvdWxkIHJldHVybiB0aGUgbmFtZWQgcHJvcGVydHkgaWYgZGVmaW5lZCcsICgpID0+XHJcbiAgICAgICAgYXNzZXJ0LmVxdWFsKGdldE5lc3RlZFZhbHVlKHtiYXI6ICdiYXonfSwgJ2JhcicpLCAnYmF6JylcclxuICAgICk7XHJcbiAgICBpdCgnc2hvdWxkIHJldHVybiB0aGUgZGVlcGx5IG5lc3RlZCBuYW1lZCBwcm9wZXJ0eSBpZiBkZWZpbmVkJywgKCkgPT5cclxuICAgICAgICBhc3NlcnQuZXF1YWwoZ2V0TmVzdGVkVmFsdWUoe2JhcjogeyBiYXo6IDEgfX0sICdiYXIuYmF6JyksIDEpXHJcbiAgICApO1xyXG4gICAgaXQoJ3Nob3VsZCByZXR1cm4gdW5kZWZpbmVkIGZvciBhIGRlZXBseSBuZXN0ZWQgbmFtZWQgcHJvcGVydHkgaWYgdW5kZWZpbmVkJywgKCkgPT5cclxuICAgICAgICBhc3NlcnQuaXNVbmRlZmluZWQoZ2V0TmVzdGVkVmFsdWUoe30sICdiYXIuYmF6JykpXHJcbiAgICApO1xyXG4gICAgaXQoJ3Nob3VsZCBub3QgYWNjZXB0IHRvIGdldCBlbXB0eSBwcm9wZXJ0eSBuYW1lcycsICgpID0+XHJcbiAgICAgICAgYXNzZXJ0LnRocm93cygoKSA9PiBnZXROZXN0ZWRWYWx1ZSh7fSwgJycpKVxyXG4gICAgKVxyXG59KTtcclxuXHJcbmRlc2NyaWJlKCdnZXROZXN0ZWRWYWx1ZURlY2xhcmF0aXZlMigpJywgKCkgPT4ge1xyXG4gICAgaXQoJ3Nob3VsZCByZXR1cm4gdW5kZWZpbmVkIGZvciB1bmRlZmluZWQgb2JqZWN0cycsICgpID0+XHJcbiAgICAgICAgYXNzZXJ0LmlzVW5kZWZpbmVkKGdldE5lc3RlZFZhbHVlRGVjbGFyYXRpdmUodW5kZWZpbmVkLCAnZm9vJykpXHJcbiAgICApO1xyXG4gICAgaXQoJ3Nob3VsZCByZXR1cm4gdW5kZWZpbmVkIGZvciB1bmRlZmluZWQgcHJvcGVydGllcycsICgpID0+XHJcbiAgICAgICAgYXNzZXJ0LmlzVW5kZWZpbmVkKGdldE5lc3RlZFZhbHVlRGVjbGFyYXRpdmUoe30sICdmb28nKSlcclxuICAgICk7XHJcbiAgICBpdCgnc2hvdWxkIHJldHVybiB0aGUgbmFtZWQgcHJvcGVydHkgaWYgZGVmaW5lZCcsICgpID0+XHJcbiAgICAgICAgYXNzZXJ0LmVxdWFsKGdldE5lc3RlZFZhbHVlRGVjbGFyYXRpdmUoe2JhcjogJ2Jheid9LCAnYmFyJyksICdiYXonKVxyXG4gICAgKTtcclxuICAgIGl0KCdzaG91bGQgcmV0dXJuIHRoZSBkZWVwbHkgbmVzdGVkIG5hbWVkIHByb3BlcnR5IGlmIGRlZmluZWQnLCAoKSA9PlxyXG4gICAgICAgIGFzc2VydC5lcXVhbChnZXROZXN0ZWRWYWx1ZURlY2xhcmF0aXZlKHtiYXI6IHsgYmF6OiAxIH19LCAnYmFyLmJheicpLCAxKVxyXG4gICAgKTtcclxuICAgIGl0KCdzaG91bGQgcmV0dXJuIHVuZGVmaW5lZCBmb3IgYSBkZWVwbHkgbmVzdGVkIG5hbWVkIHByb3BlcnR5IGlmIHVuZGVmaW5lZCcsICgpID0+XHJcbiAgICAgICAgYXNzZXJ0LmlzVW5kZWZpbmVkKGdldE5lc3RlZFZhbHVlRGVjbGFyYXRpdmUoe30sICdiYXIuYmF6JykpXHJcbiAgICApO1xyXG4gICAgaXQoJ3Nob3VsZCBub3QgYWNjZXB0IHRvIGdldCBlbXB0eSBwcm9wZXJ0eSBuYW1lcycsICgpID0+XHJcbiAgICAgICAgYXNzZXJ0LnRocm93cygoKSA9PiBnZXROZXN0ZWRWYWx1ZURlY2xhcmF0aXZlKHt9LCAnJykpXHJcbiAgICApXHJcbn0pOyJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "testRunner.js"
+      ],
+      "names": [
+        "assert",
+        "require",
+        "describe",
+        "it",
+        "isUndefined",
+        "undefined",
+        "equal",
+        "bar",
+        "baz",
+        "throws"
+      ],
+      "mappings": ";;AAEA;;AAFA,IAAMA,SAASC,QAAQ,MAAR,EAAgBD,MAA/B;;AAKAE,SAAS,kBAAT,EAA6B,YAAM;AAC/BC,OAAG,+CAAH,EAAoD;AAAA,eAChDH,OAAOI,WAAP,CAAmB,4BAAeC,SAAf,EAA0B,KAA1B,CAAnB,CADgD;AAAA,KAApD;AAGAF,OAAG,kDAAH,EAAuD;AAAA,eACnDH,OAAOI,WAAP,CAAmB,4BAAe,EAAf,EAAmB,KAAnB,CAAnB,CADmD;AAAA,KAAvD;AAGAD,OAAG,6CAAH,EAAkD;AAAA,eAC9CH,OAAOM,KAAP,CAAa,4BAAe,EAACC,KAAK,KAAN,EAAf,EAA6B,KAA7B,CAAb,EAAkD,KAAlD,CAD8C;AAAA,KAAlD;AAGAJ,OAAG,2DAAH,EAAgE;AAAA,eAC5DH,OAAOM,KAAP,CAAa,4BAAe,EAACC,KAAK,EAAEC,KAAK,CAAP,EAAN,EAAf,EAAkC,SAAlC,CAAb,EAA2D,CAA3D,CAD4D;AAAA,KAAhE;AAGAL,OAAG,yEAAH,EAA8E;AAAA,eAC1EH,OAAOI,WAAP,CAAmB,4BAAe,EAAf,EAAmB,SAAnB,CAAnB,CAD0E;AAAA,KAA9E;AAGAD,OAAG,+CAAH,EAAoD;AAAA,eAChDH,OAAOS,MAAP,CAAc;AAAA,mBAAM,4BAAe,EAAf,EAAmB,EAAnB,CAAN;AAAA,SAAd,CADgD;AAAA,KAApD;AAGH,CAnBD;;AAqBAP,SAAS,8BAAT,EAAyC,YAAM;AAC3CC,OAAG,+CAAH,EAAoD;AAAA,eAChDH,OAAOI,WAAP,CAAmB,uCAA0BC,SAA1B,EAAqC,KAArC,CAAnB,CADgD;AAAA,KAApD;AAGAF,OAAG,kDAAH,EAAuD;AAAA,eACnDH,OAAOI,WAAP,CAAmB,uCAA0B,EAA1B,EAA8B,KAA9B,CAAnB,CADmD;AAAA,KAAvD;AAGAD,OAAG,6CAAH,EAAkD;AAAA,eAC9CH,OAAOM,KAAP,CAAa,uCAA0B,EAACC,KAAK,KAAN,EAA1B,EAAwC,KAAxC,CAAb,EAA6D,KAA7D,CAD8C;AAAA,KAAlD;AAGAJ,OAAG,2DAAH,EAAgE;AAAA,eAC5DH,OAAOM,KAAP,CAAa,uCAA0B,EAACC,KAAK,EAAEC,KAAK,CAAP,EAAN,EAA1B,EAA6C,SAA7C,CAAb,EAAsE,CAAtE,CAD4D;AAAA,KAAhE;AAGAL,OAAG,yEAAH,EAA8E;AAAA,eAC1EH,OAAOI,WAAP,CAAmB,uCAA0B,EAA1B,EAA8B,SAA9B,CAAnB,CAD0E;AAAA,KAA9E;AAGAD,OAAG,+CAAH,EAAoD;AAAA,eAChDH,OAAOS,MAAP,CAAc;AAAA,mBAAM,uCAA0B,EAA1B,EAA8B,EAA9B,CAAN;AAAA,SAAd,CADgD;AAAA,KAApD;AAGH,CAnBD",
+      "file": "testRunner.js",
+      "sourceRoot": "./test",
+      "sourcesContent": [
+        "const assert = require('chai').assert;\r\n\r\nimport {getNestedValue} from '../runner';\r\nimport {getNestedValueDeclarative} from '../runner';\r\n\r\ndescribe('getNestedValue()', () => {\r\n    it('should return undefined for undefined objects', () =>\r\n        assert.isUndefined(getNestedValue(undefined, 'foo'))\r\n    );\r\n    it('should return undefined for undefined properties', () =>\r\n        assert.isUndefined(getNestedValue({}, 'foo'))\r\n    );\r\n    it('should return the named property if defined', () =>\r\n        assert.equal(getNestedValue({bar: 'baz'}, 'bar'), 'baz')\r\n    );\r\n    it('should return the deeply nested named property if defined', () =>\r\n        assert.equal(getNestedValue({bar: { baz: 1 }}, 'bar.baz'), 1)\r\n    );\r\n    it('should return undefined for a deeply nested named property if undefined', () =>\r\n        assert.isUndefined(getNestedValue({}, 'bar.baz'))\r\n    );\r\n    it('should not accept to get empty property names', () =>\r\n        assert.throws(() => getNestedValue({}, ''))\r\n    )\r\n});\r\n\r\ndescribe('getNestedValueDeclarative2()', () => {\r\n    it('should return undefined for undefined objects', () =>\r\n        assert.isUndefined(getNestedValueDeclarative(undefined, 'foo'))\r\n    );\r\n    it('should return undefined for undefined properties', () =>\r\n        assert.isUndefined(getNestedValueDeclarative({}, 'foo'))\r\n    );\r\n    it('should return the named property if defined', () =>\r\n        assert.equal(getNestedValueDeclarative({bar: 'baz'}, 'bar'), 'baz')\r\n    );\r\n    it('should return the deeply nested named property if defined', () =>\r\n        assert.equal(getNestedValueDeclarative({bar: { baz: 1 }}, 'bar.baz'), 1)\r\n    );\r\n    it('should return undefined for a deeply nested named property if undefined', () =>\r\n        assert.isUndefined(getNestedValueDeclarative({}, 'bar.baz'))\r\n    );\r\n    it('should not accept to get empty property names', () =>\r\n        assert.throws(() => getNestedValueDeclarative({}, ''))\r\n    )\r\n});"
+      ]
+    },
+    "mtime": 1488869458076
+  },
+  "{\"filename\":\"./Runner.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"C:/Users/R.Steven\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.23.1": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [
+            "getNestedValue",
+            "object",
+            "propertyName"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "getNestedValue",
+              "exported": "getNestedValue"
+            },
+            {
+              "kind": "local",
+              "local": "object",
+              "exported": "object"
+            },
+            {
+              "kind": "local",
+              "local": "propertyName",
+              "exported": "propertyName"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "./Runner.js",
+      "filenameRelative": "./Runner.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "Runner.js",
+      "sourceFileName": "Runner.js",
+      "sourceRoot": "C:/Users/R.Steven",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "C:/Users/R.Steven",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "Runner"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.getNestedValue = getNestedValue;\nfunction getNestedValue(object, propertyName) {\n    if (!propertyName) throw new Error('Impossible to set null property');\n    var subObject = object,\n        parts = propertyName.split('.'),\n        len = parts.length,\n        i;\n\n    for (i = 0; i < len; i++) {\n        if (!subObject || typeof subObject === 'undefined') return undefined;\n        subObject = subObject[parts[i]];\n    }\n\n    return subObject;\n}\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIlJ1bm5lci5qcyJdLCJuYW1lcyI6WyJnZXROZXN0ZWRWYWx1ZSIsIm9iamVjdCIsInByb3BlcnR5TmFtZSIsIkVycm9yIiwic3ViT2JqZWN0IiwicGFydHMiLCJzcGxpdCIsImxlbiIsImxlbmd0aCIsImkiLCJ1bmRlZmluZWQiXSwibWFwcGluZ3MiOiI7Ozs7O1FBQWdCQSxjLEdBQUFBLGM7QUFBVCxTQUFTQSxjQUFULENBQXdCQyxNQUF4QixFQUFnQ0MsWUFBaEMsRUFBOEM7QUFDakQsUUFBSSxDQUFDQSxZQUFMLEVBQW1CLE1BQU0sSUFBSUMsS0FBSixDQUFVLGlDQUFWLENBQU47QUFDbkIsUUFBSUMsWUFBWUgsTUFBaEI7QUFBQSxRQUNJSSxRQUFRSCxhQUFhSSxLQUFiLENBQW1CLEdBQW5CLENBRFo7QUFBQSxRQUVJQyxNQUFNRixNQUFNRyxNQUZoQjtBQUFBLFFBR0lDLENBSEo7O0FBS0EsU0FBS0EsSUFBSSxDQUFULEVBQVlBLElBQUlGLEdBQWhCLEVBQXFCRSxHQUFyQixFQUEwQjtBQUN0QixZQUFJLENBQUNMLFNBQUQsSUFBYyxPQUFPQSxTQUFQLEtBQXFCLFdBQXZDLEVBQW9ELE9BQU9NLFNBQVA7QUFDcEROLG9CQUFZQSxVQUFVQyxNQUFNSSxDQUFOLENBQVYsQ0FBWjtBQUNIOztBQUVELFdBQU9MLFNBQVA7QUFDSCIsImZpbGUiOiJSdW5uZXIuanMiLCJzb3VyY2VSb290IjoiQzovVXNlcnMvUi5TdGV2ZW4iLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZnVuY3Rpb24gZ2V0TmVzdGVkVmFsdWUob2JqZWN0LCBwcm9wZXJ0eU5hbWUpIHtcclxuICAgIGlmICghcHJvcGVydHlOYW1lKSB0aHJvdyBuZXcgRXJyb3IoJ0ltcG9zc2libGUgdG8gc2V0IG51bGwgcHJvcGVydHknKTtcclxuICAgIHZhciBzdWJPYmplY3QgPSBvYmplY3QsXHJcbiAgICAgICAgcGFydHMgPSBwcm9wZXJ0eU5hbWUuc3BsaXQoJy4nKSxcclxuICAgICAgICBsZW4gPSBwYXJ0cy5sZW5ndGgsXHJcbiAgICAgICAgaTtcclxuXHJcbiAgICBmb3IgKGkgPSAwOyBpIDwgbGVuOyBpKyspIHtcclxuICAgICAgICBpZiAoIXN1Yk9iamVjdCB8fCB0eXBlb2Ygc3ViT2JqZWN0ID09PSAndW5kZWZpbmVkJykgcmV0dXJuIHVuZGVmaW5lZDtcclxuICAgICAgICBzdWJPYmplY3QgPSBzdWJPYmplY3RbcGFydHNbaV1dO1xyXG4gICAgfVxyXG5cclxuICAgIHJldHVybiBzdWJPYmplY3Q7XHJcbn1cclxuXHJcblxyXG4iXX0=",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "Runner.js"
+      ],
+      "names": [
+        "getNestedValue",
+        "object",
+        "propertyName",
+        "Error",
+        "subObject",
+        "parts",
+        "split",
+        "len",
+        "length",
+        "i",
+        "undefined"
+      ],
+      "mappings": ";;;;;QAAgBA,c,GAAAA,c;AAAT,SAASA,cAAT,CAAwBC,MAAxB,EAAgCC,YAAhC,EAA8C;AACjD,QAAI,CAACA,YAAL,EAAmB,MAAM,IAAIC,KAAJ,CAAU,iCAAV,CAAN;AACnB,QAAIC,YAAYH,MAAhB;AAAA,QACII,QAAQH,aAAaI,KAAb,CAAmB,GAAnB,CADZ;AAAA,QAEIC,MAAMF,MAAMG,MAFhB;AAAA,QAGIC,CAHJ;;AAKA,SAAKA,IAAI,CAAT,EAAYA,IAAIF,GAAhB,EAAqBE,GAArB,EAA0B;AACtB,YAAI,CAACL,SAAD,IAAc,OAAOA,SAAP,KAAqB,WAAvC,EAAoD,OAAOM,SAAP;AACpDN,oBAAYA,UAAUC,MAAMI,CAAN,CAAV,CAAZ;AACH;;AAED,WAAOL,SAAP;AACH",
+      "file": "Runner.js",
+      "sourceRoot": "C:/Users/R.Steven",
+      "sourcesContent": [
+        "export function getNestedValue(object, propertyName) {\r\n    if (!propertyName) throw new Error('Impossible to set null property');\r\n    var subObject = object,\r\n        parts = propertyName.split('.'),\r\n        len = parts.length,\r\n        i;\r\n\r\n    for (i = 0; i < len; i++) {\r\n        if (!subObject || typeof subObject === 'undefined') return undefined;\r\n        subObject = subObject[parts[i]];\r\n    }\r\n\r\n    return subObject;\r\n}\r\n\r\n\r\n"
+      ]
+    },
+    "mtime": 1488866579616
+  },
+  "{\"filename\":\"./runner.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"C:/Users/R.Steven\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.23.1": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [
+            "getNestedValueDeclarative",
+            "object",
+            "propertyName",
+            "getNestedValue",
+            "object",
+            "propertyName"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "getNestedValueDeclarative",
+              "exported": "getNestedValueDeclarative"
+            },
+            {
+              "kind": "local",
+              "local": "object",
+              "exported": "object"
+            },
+            {
+              "kind": "local",
+              "local": "propertyName",
+              "exported": "propertyName"
+            },
+            {
+              "kind": "local",
+              "local": "getNestedValue",
+              "exported": "getNestedValue"
+            },
+            {
+              "kind": "local",
+              "local": "object",
+              "exported": "object"
+            },
+            {
+              "kind": "local",
+              "local": "propertyName",
+              "exported": "propertyName"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "./runner.js",
+      "filenameRelative": "./runner.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "runner.js",
+      "sourceFileName": "runner.js",
+      "sourceRoot": "C:/Users/R.Steven",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "C:/Users/R.Steven",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "runner"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.getNestedValueDeclarative = getNestedValueDeclarative;\nexports.getNestedValue = getNestedValue;\nfunction getValue(object, propertyName) {\n    if (!propertyName) throw new Error('Impossible to set null property');\n    return typeof object === 'undefined' ? undefined : object[propertyName];\n}\n\nfunction getNestedValueDeclarative(object, propertyName) {\n    return propertyName.split('.').reduce(getValue, object);\n}\n\nfunction getNestedValue(object, propertyName) {\n    if (!propertyName) throw new Error('Impossible to set null property');\n    var subObject = object,\n        parts = propertyName.split('.'),\n        len = parts.length,\n        i;\n\n    for (i = 0; i < len; i++) {\n        if (!subObject || typeof subObject === 'undefined') return undefined;\n        subObject = subObject[parts[i]];\n    }\n\n    return subObject;\n}\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJ1bm5lci5qcyJdLCJuYW1lcyI6WyJnZXROZXN0ZWRWYWx1ZURlY2xhcmF0aXZlIiwiZ2V0TmVzdGVkVmFsdWUiLCJnZXRWYWx1ZSIsIm9iamVjdCIsInByb3BlcnR5TmFtZSIsIkVycm9yIiwidW5kZWZpbmVkIiwic3BsaXQiLCJyZWR1Y2UiLCJzdWJPYmplY3QiLCJwYXJ0cyIsImxlbiIsImxlbmd0aCIsImkiXSwibWFwcGluZ3MiOiI7Ozs7O1FBS2dCQSx5QixHQUFBQSx5QjtRQUlBQyxjLEdBQUFBLGM7QUFUaEIsU0FBU0MsUUFBVCxDQUFrQkMsTUFBbEIsRUFBMEJDLFlBQTFCLEVBQXdDO0FBQ3BDLFFBQUksQ0FBQ0EsWUFBTCxFQUFtQixNQUFNLElBQUlDLEtBQUosQ0FBVSxpQ0FBVixDQUFOO0FBQ25CLFdBQU8sT0FBT0YsTUFBUCxLQUFrQixXQUFsQixHQUFnQ0csU0FBaEMsR0FBNENILE9BQU9DLFlBQVAsQ0FBbkQ7QUFDSDs7QUFFTSxTQUFTSix5QkFBVCxDQUFtQ0csTUFBbkMsRUFBMkNDLFlBQTNDLEVBQXlEO0FBQzVELFdBQU9BLGFBQWFHLEtBQWIsQ0FBbUIsR0FBbkIsRUFBd0JDLE1BQXhCLENBQStCTixRQUEvQixFQUF5Q0MsTUFBekMsQ0FBUDtBQUNIOztBQUVNLFNBQVNGLGNBQVQsQ0FBd0JFLE1BQXhCLEVBQWdDQyxZQUFoQyxFQUE4QztBQUNqRCxRQUFJLENBQUNBLFlBQUwsRUFBbUIsTUFBTSxJQUFJQyxLQUFKLENBQVUsaUNBQVYsQ0FBTjtBQUNuQixRQUFJSSxZQUFZTixNQUFoQjtBQUFBLFFBQ0lPLFFBQVFOLGFBQWFHLEtBQWIsQ0FBbUIsR0FBbkIsQ0FEWjtBQUFBLFFBRUlJLE1BQU1ELE1BQU1FLE1BRmhCO0FBQUEsUUFHSUMsQ0FISjs7QUFLQSxTQUFLQSxJQUFJLENBQVQsRUFBWUEsSUFBSUYsR0FBaEIsRUFBcUJFLEdBQXJCLEVBQTBCO0FBQ3RCLFlBQUksQ0FBQ0osU0FBRCxJQUFjLE9BQU9BLFNBQVAsS0FBcUIsV0FBdkMsRUFBb0QsT0FBT0gsU0FBUDtBQUNwREcsb0JBQVlBLFVBQVVDLE1BQU1HLENBQU4sQ0FBVixDQUFaO0FBQ0g7O0FBRUQsV0FBT0osU0FBUDtBQUNIIiwiZmlsZSI6InJ1bm5lci5qcyIsInNvdXJjZVJvb3QiOiJDOi9Vc2Vycy9SLlN0ZXZlbiIsInNvdXJjZXNDb250ZW50IjpbImZ1bmN0aW9uIGdldFZhbHVlKG9iamVjdCwgcHJvcGVydHlOYW1lKSB7XHJcbiAgICBpZiAoIXByb3BlcnR5TmFtZSkgdGhyb3cgbmV3IEVycm9yKCdJbXBvc3NpYmxlIHRvIHNldCBudWxsIHByb3BlcnR5Jyk7XHJcbiAgICByZXR1cm4gdHlwZW9mIG9iamVjdCA9PT0gJ3VuZGVmaW5lZCcgPyB1bmRlZmluZWQgOiBvYmplY3RbcHJvcGVydHlOYW1lXVxyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gZ2V0TmVzdGVkVmFsdWVEZWNsYXJhdGl2ZShvYmplY3QsIHByb3BlcnR5TmFtZSkge1xyXG4gICAgcmV0dXJuIHByb3BlcnR5TmFtZS5zcGxpdCgnLicpLnJlZHVjZShnZXRWYWx1ZSwgb2JqZWN0KTtcclxufVxyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIGdldE5lc3RlZFZhbHVlKG9iamVjdCwgcHJvcGVydHlOYW1lKSB7XHJcbiAgICBpZiAoIXByb3BlcnR5TmFtZSkgdGhyb3cgbmV3IEVycm9yKCdJbXBvc3NpYmxlIHRvIHNldCBudWxsIHByb3BlcnR5Jyk7XHJcbiAgICB2YXIgc3ViT2JqZWN0ID0gb2JqZWN0LFxyXG4gICAgICAgIHBhcnRzID0gcHJvcGVydHlOYW1lLnNwbGl0KCcuJyksXHJcbiAgICAgICAgbGVuID0gcGFydHMubGVuZ3RoLFxyXG4gICAgICAgIGk7XHJcblxyXG4gICAgZm9yIChpID0gMDsgaSA8IGxlbjsgaSsrKSB7XHJcbiAgICAgICAgaWYgKCFzdWJPYmplY3QgfHwgdHlwZW9mIHN1Yk9iamVjdCA9PT0gJ3VuZGVmaW5lZCcpIHJldHVybiB1bmRlZmluZWQ7XHJcbiAgICAgICAgc3ViT2JqZWN0ID0gc3ViT2JqZWN0W3BhcnRzW2ldXTtcclxuICAgIH1cclxuXHJcbiAgICByZXR1cm4gc3ViT2JqZWN0O1xyXG59XHJcblxyXG5cclxuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "runner.js"
+      ],
+      "names": [
+        "getNestedValueDeclarative",
+        "getNestedValue",
+        "getValue",
+        "object",
+        "propertyName",
+        "Error",
+        "undefined",
+        "split",
+        "reduce",
+        "subObject",
+        "parts",
+        "len",
+        "length",
+        "i"
+      ],
+      "mappings": ";;;;;QAKgBA,yB,GAAAA,yB;QAIAC,c,GAAAA,c;AAThB,SAASC,QAAT,CAAkBC,MAAlB,EAA0BC,YAA1B,EAAwC;AACpC,QAAI,CAACA,YAAL,EAAmB,MAAM,IAAIC,KAAJ,CAAU,iCAAV,CAAN;AACnB,WAAO,OAAOF,MAAP,KAAkB,WAAlB,GAAgCG,SAAhC,GAA4CH,OAAOC,YAAP,CAAnD;AACH;;AAEM,SAASJ,yBAAT,CAAmCG,MAAnC,EAA2CC,YAA3C,EAAyD;AAC5D,WAAOA,aAAaG,KAAb,CAAmB,GAAnB,EAAwBC,MAAxB,CAA+BN,QAA/B,EAAyCC,MAAzC,CAAP;AACH;;AAEM,SAASF,cAAT,CAAwBE,MAAxB,EAAgCC,YAAhC,EAA8C;AACjD,QAAI,CAACA,YAAL,EAAmB,MAAM,IAAIC,KAAJ,CAAU,iCAAV,CAAN;AACnB,QAAII,YAAYN,MAAhB;AAAA,QACIO,QAAQN,aAAaG,KAAb,CAAmB,GAAnB,CADZ;AAAA,QAEII,MAAMD,MAAME,MAFhB;AAAA,QAGIC,CAHJ;;AAKA,SAAKA,IAAI,CAAT,EAAYA,IAAIF,GAAhB,EAAqBE,GAArB,EAA0B;AACtB,YAAI,CAACJ,SAAD,IAAc,OAAOA,SAAP,KAAqB,WAAvC,EAAoD,OAAOH,SAAP;AACpDG,oBAAYA,UAAUC,MAAMG,CAAN,CAAV,CAAZ;AACH;;AAED,WAAOJ,SAAP;AACH",
+      "file": "runner.js",
+      "sourceRoot": "C:/Users/R.Steven",
+      "sourcesContent": [
+        "function getValue(object, propertyName) {\r\n    if (!propertyName) throw new Error('Impossible to set null property');\r\n    return typeof object === 'undefined' ? undefined : object[propertyName]\r\n}\r\n\r\nexport function getNestedValueDeclarative(object, propertyName) {\r\n    return propertyName.split('.').reduce(getValue, object);\r\n}\r\n\r\nexport function getNestedValue(object, propertyName) {\r\n    if (!propertyName) throw new Error('Impossible to set null property');\r\n    var subObject = object,\r\n        parts = propertyName.split('.'),\r\n        len = parts.length,\r\n        i;\r\n\r\n    for (i = 0; i < len; i++) {\r\n        if (!subObject || typeof subObject === 'undefined') return undefined;\r\n        subObject = subObject[parts[i]];\r\n    }\r\n\r\n    return subObject;\r\n}\r\n\r\n\r\n"
+      ]
+    },
+    "mtime": 1488869541388
+  }
+}
