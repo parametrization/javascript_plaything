@@ -7,7 +7,7 @@ export function getNestedValueDeclarative(object, propertyName) {
     return propertyName.split('.').reduce(getValue, object);
 }
 
-export function getNestedValue(object, propertyName) {
+export function getNestedValueImperative(object, propertyName) {
     if (!propertyName) throw new Error('Impossible to set null property');
     var subObject = object,
         parts = propertyName.split('.'),
@@ -21,5 +21,3 @@ export function getNestedValue(object, propertyName) {
 
     return subObject;
 }
-
-

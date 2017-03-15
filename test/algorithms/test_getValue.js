@@ -1,29 +1,29 @@
 const assert = require('chai').assert;
 
-import {getNestedValue} from '../getValue';
-import {getNestedValueDeclarative} from '../getValue';
+import {getNestedValueImperative} from '../../src/algorithms/getValue';
+import {getNestedValueDeclarative} from '../../src/algorithms/getValue';
 
 describe('getNestedValue()', () => {
     it('should return undefined for undefined objects', () =>
-        assert.isUndefined(getNestedValue(undefined, 'foo'))
+        assert.isUndefined(getNestedValueImperative(undefined, 'foo'))
     );
     it('should return undefined for undefined properties', () =>
-        assert.isUndefined(getNestedValue({}, 'foo'))
+        assert.isUndefined(getNestedValueImperative({}, 'foo'))
     );
     it('should return the named property if defined', () =>
-        assert.equal(getNestedValue({bar: 'baz'}, 'bar'), 'baz')
+        assert.equal(getNestedValueImperative({bar: 'baz'}, 'bar'), 'baz')
     );
     it('should return the deeply nested named property if defined', () =>
-        assert.equal(getNestedValue({bar: { baz: 1 }}, 'bar.baz'), 1)
+        assert.equal(getNestedValueImperative({bar: { baz: 1 }}, 'bar.baz'), 1)
     );
     it('should return the deeply nested named property if defined three levels deep', () =>
-        assert.equal(getNestedValue({bar: { baz: { foo: 1}}}, 'bar.baz.foo'), 1)
+        assert.equal(getNestedValueImperative({bar: { baz: { foo: 1}}}, 'bar.baz.foo'), 1)
     );
     it('should return undefined for a deeply nested named property if undefined', () =>
-        assert.isUndefined(getNestedValue({}, 'bar.baz'))
+        assert.isUndefined(getNestedValueImperative({}, 'bar.baz'))
     );
     it('should not accept to get empty property names', () =>
-        assert.throws(() => getNestedValue({}, ''), Error, 'Impossible to set null property')
+        assert.throws(() => getNestedValueImperative({}, ''), Error, 'Impossible to set null property')
     );
 });
 
@@ -41,7 +41,7 @@ describe('getNestedValueDeclarative()', () => {
         assert.equal(getNestedValueDeclarative({bar: { baz: 1 }}, 'bar.baz'), 1)
     );
     it('should return the deeply nested named property if defined three levels deep', () =>
-        assert.equal(getNestedValue({bar: { baz: { foo: 1}}}, 'bar.baz.foo'), 1)
+        assert.equal(getNestedValueDeclarative({bar: { baz: { foo: 1}}}, 'bar.baz.foo'), 1)
     );
     it('should return undefined for a deeply nested named property if undefined', () =>
         assert.isUndefined(getNestedValueDeclarative({}, 'bar.baz'))

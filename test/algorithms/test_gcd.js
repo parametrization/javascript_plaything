@@ -1,7 +1,7 @@
 const assert = require('chai').assert;
 
-import {gcdIterative} from '../gcd';
-import {gcdDeclarative} from '../gcd'
+import {gcdIterative} from '../../src/algorithms/gcd';
+import {gcdDeclarative} from '../../src/algorithms/gcd'
 
 describe('gcdIterative()', () => {
   it('should return 6 for gcd(36,42)', () =>
