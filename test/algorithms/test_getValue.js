@@ -1,7 +1,7 @@
 const assert = require('chai').assert;
 
-import {getNestedValueImperative} from '../../../src/algorithms/numerical/getValue';
-import {getNestedValueDeclarative} from '../../../src/algorithms/numerical/getValue';
+import {getNestedValueImperative} from '../../src/algorithms/getValue';
+import {getNestedValueDeclarative} from '../../src/algorithms/getValue';
 
 describe('getNestedValue()', () => {
     it('should return undefined for undefined objects', () =>
