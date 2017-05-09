@@ -4,17 +4,7 @@ import {gcdIterative} from '../../../src/algorithms/numerical/gcd';
 import {gcdDeclarative} from '../../../src/algorithms/numerical/gcd';
 
 describe('gcdIterative()', () => {
-  it('should return 6 for gcd(36,42)', () =>
-    assert.equal(gcdIterative(36,42), 6)
-  );
-  it('should return 6 for gcd(42,36)', () =>
-    assert.equal(gcdIterative(42,36), 6)
-  );
-  it('should return 9 for gcd(9,78)', () =>
-    assert.equal(gcdIterative(9,78), 3)
-  );
-  it('should return 9 for gcd(78,9)', () =>
-    assert.equal(gcdIterative(78,9), 3)
+  it('should return 6 for gcd(36,42)', () => assert.equal(gcdIterative(36,42), 6) ); it('should return 6 for gcd(42,36)', () => assert.equal(gcdIterative(42,36), 6) ); it('should return 9 for gcd(9,78)', () => assert.equal(gcdIterative(9,78), 3) ); it('should return 9 for gcd(78,9)', () => assert.equal(gcdIterative(78,9), 3)
   );
   it('should return 25 for gcd(25,25)', () =>
     assert.equal(gcdIterative(25,25), 25)
