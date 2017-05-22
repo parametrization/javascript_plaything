@@ -1,6 +1,6 @@
 function getValue(object, propertyName) {
     if (!propertyName) throw new Error('Impossible to set null property');
-    return typeof object === 'undefined' ? undefined : object[propertyName]
+    return typeof object === 'undefined' ? undefined : object[propertyName];
 }
 
 export function getNestedValueDeclarative(object, propertyName) {
@@ -9,7 +9,7 @@ export function getNestedValueDeclarative(object, propertyName) {
 
 export function getNestedValueImperative(object, propertyName) {
     if (!propertyName) throw new Error('Impossible to set null property');
-    var subObject = object,
+    let subObject = object,
         parts = propertyName.split('.'),
         len = parts.length,
         i;

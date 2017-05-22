@@ -13,8 +13,8 @@ describe('fibonacciDeclarative()', () => {
   it('should return 21 for base case fib(8)', () =>
     assert.equal(fibonacciDeclarative(8), 21)
   );
-  it('should return xx for base case fib(20)', () =>
-    assert.equal(fibonacciDeclarative(40),  102334155)
+  it('should return 102334155 for base case fib(20)', () =>
+    assert.equal(fibonacciDeclarative(40), 102334155)
   );
 });
 
@@ -28,7 +28,7 @@ describe('fibonacciImperative()', () => {
   it('should return 21 for base case fib(8)', () =>
     assert.equal(fibonacciImperative(8), 21)
   );
-  it('should return xx for base case fib(20)', () =>
-    assert.equal(fibonacciImperative(40),  102334155)
+  it('should return 102334155 for base case fib(20)', () =>
+    assert.equal(fibonacciImperative(40), 102334155)
   );
 });
